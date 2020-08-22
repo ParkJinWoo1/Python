@@ -4,17 +4,14 @@ import random
 # main 함수에서 호출하여 출력하자
 
 def lotto():
-    list = []
-    for i in range(6):
-        a = random.randint(1,45)
-        if a not in list:
-            list.append(a)
-        else :
-            b = random.randint(1, 45)
-            while b not in list:
-                list.append(b)
-            
-    return list
+    lotto = set()
+    
+    while len(lotto) <= 6:
+        ran = random.randint(1, 45)
+        lotto.add(ran)
+        
+    result = sorted(lotto)
+    return result
 
 
 if __name__ == '__main__':
