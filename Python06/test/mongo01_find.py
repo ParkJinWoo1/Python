@@ -7,6 +7,7 @@ client = MongoClient('localhost', 27017)
 db = client.test
 score = db.score
 
+# cursor 객체 : 포인터 개념 
 cursor = score.find()
 print(cursor)
 
